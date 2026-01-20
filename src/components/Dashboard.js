@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 import React from 'react';
 import './Dashboard.css';
 
@@ -18,14 +16,8 @@ const Dashboard = ({ todos, folders }) => {
   };
 
   const todayTodos = getTodayTodos();
-  const completedTodayCount = todayTodos.filter((t) => t.completed).length;
   const totalCount = todos.length;
   const completedCount = todos.filter((t) => t.completed).length;
-
-  const formatDate = (date) => {
-    const options = { month: 'short', day: 'numeric' };
-    return new Date(date).toLocaleDateString('ko-KR', options);
-  };
 
   const formatTime = (time) => {
     if (!time) return '';
