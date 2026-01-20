@@ -1,0 +1,351 @@
+.folder-manager-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+/* Add Folder Section */
+.add-folder-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  border: 2px dashed #e0e0e0;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+}
+
+.form-input {
+  padding: 10px 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #FFB6E1;
+  background: #fff;
+}
+
+.form-input-small {
+  padding: 8px 10px;
+  font-size: 12px;
+}
+
+/* Icon Picker */
+.icon-picker {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.icon-option,
+.icon-option-small {
+  padding: 10px;
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+}
+
+.icon-option:hover,
+.icon-option-small:hover {
+  border-color: #FFB6E1;
+  transform: scale(1.05);
+}
+
+.icon-option.selected,
+.icon-option-small.selected {
+  background: linear-gradient(135deg, #FFB6E1 0%, #B6E1FF 100%);
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(255, 182, 225, 0.3);
+}
+
+.icon-picker-small {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.icon-option-small {
+  padding: 6px;
+  font-size: 18px;
+}
+
+/* Color Picker */
+.color-picker {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.color-option,
+.color-option-small {
+  padding: 0;
+  border: 3px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.color-option:hover,
+.color-option-small:hover {
+  transform: scale(1.05);
+}
+
+.color-option.selected,
+.color-option-small.selected {
+  border-color: #333;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #333;
+}
+
+.color-picker-small {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.color-option-small {
+  border-width: 2px;
+  font-size: 14px;
+}
+
+/* Add Folder Button */
+.btn-add-folder {
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #FFB6E1 0%, #B6E1FF 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-add-folder:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 182, 225, 0.3);
+}
+
+/* Folders List */
+.folders-list-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.folders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.folder-card {
+  background: #fff;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 12px;
+  transition: all 0.3s ease;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.folder-card:hover {
+  border-color: #FFB6E1;
+  box-shadow: 0 4px 12px rgba(255, 182, 225, 0.15);
+}
+
+/* View Mode */
+.view-mode {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.folder-preview {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, var(--folder-color) 0%, rgba(0, 0, 0, 0.05) 100%);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.folder-preview-icon {
+  font-size: 24px;
+}
+
+.folder-preview-name {
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+  word-break: break-word;
+  font-size: 13px;
+}
+
+.folder-actions {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.btn-edit-small,
+.btn-delete-small {
+  background: #f0f0f0;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-edit-small:hover {
+  background: #4CAF50;
+  color: #fff;
+}
+
+.btn-delete-small:hover {
+  background: #FF6B6B;
+  color: #fff;
+}
+
+/* Edit Mode */
+.edit-mode {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.btn-cancel,
+.btn-save {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.btn-cancel:hover {
+  background: #e0e0e0;
+}
+
+.btn-save {
+  background: #4CAF50;
+  color: #fff;
+}
+
+.btn-save:hover {
+  background: #388E3C;
+}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 16px 24px 24px;
+  border-top: 2px solid #f0f0f0;
+  display: flex;
+  gap: 12px;
+}
+
+.btn-close-manager {
+  flex: 1;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #FFB6E1 0%, #B6E1FF 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-close-manager:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 182, 225, 0.3);
+}
+
+/* 반응형 */
+@media (max-width: 600px) {
+  .folder-manager-content {
+    gap: 20px;
+    max-height: none;
+  }
+
+  .folders-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .icon-picker {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .color-picker {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .add-folder-section {
+    padding: 16px;
+    gap: 12px;
+  }
+}
